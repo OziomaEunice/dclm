@@ -112,10 +112,6 @@ img {
         background-color: rgb(2, 2, 55);
     }
 
-    #check:checked ~ ul{
-        left: 0;
-    }
-
     a:hover:not(.active){
         background: none;
         background-color: rgb(9, 9, 138);
