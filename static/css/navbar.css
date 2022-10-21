@@ -79,7 +79,7 @@ img {
 
 @media (max-width: 952px){
 
-    nav ul li a{
+    ul li a{
         font-size: 16px;
     }
 }
@@ -97,13 +97,13 @@ img {
         transition: all .5s;
     }
 
-    nav ul li{
+    ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    nav ul li a{
+    ul li a{
         font-size: 20px;
     }
 
