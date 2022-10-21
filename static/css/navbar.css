@@ -77,6 +77,8 @@ img {
   } /*code taken from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center*/
 
 
+
+/* Mobile/Tablet view */
 @media (max-width: 952px){
 
     ul li a{
