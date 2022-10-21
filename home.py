@@ -9,10 +9,16 @@ from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
+
+# Home page
 @app.route('/Home/')
 def home():
     return render_template('Home.html')
 
+# About Us page
+@app.route('/About/')
+def home():
+    return render_template('About.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
