@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+    <link href="{{ url_for('static', filename='css/navbar.css') }}" type= "text/css" rel= "stylesheet"> <!--This links navbar.css file-->
+    <link href="{{ url_for('static', filename='css/slideshow.css') }}" type= "text/css" rel= "stylesheet"> <!--This links slideshow.css file-->
+    <link href="{{ url_for('static', filename='css/SocialMedia.css') }}" type= "text/css" rel= "stylesheet"> <!--This links SocialMedia.css file-->
+    <link href="{{ url_for('static', filename='css/events.css') }}" type= "text/css" rel= "stylesheet"> <!--This links events.css-->
+    <link rel="stylesheet" href="static/Images"> <!--Think link with the images folder-->
+    <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'> <!--Google font-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCLM SCOTLAND</title>
+    <link rel="icon" href="/static/Images/DeeperLifeLogo.jpg" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+    of the page (DCLM SCOTLAND)-->
+</head>
+<body style="background-color: #d4dadc;"> 
+    {% block content %}
+<!--All the code written here is for the features to be displayed on the web-->
+<script src="/static/js/Slideshow.js"></script> <!--This links the Slideshow.js file with this file-->
+
+<!--These links are to open pages when you click on one of the item in the nav bar-->
+<!-- <a href="/2.AboutUsPage/About.html"></a> -->
+
+<!--THIS SECTION IS FOR THE NAVIGATION BAR-->
+    <nav> <!--nav bar-->
+        <div id="myDIV"> <!--This was taken from #myDIV. I got this code from 
+            https://www.w3schools.com/cssref/tryit.asp?filename=trycss_play_text-shadow .
+        What this will do is it will put a shadow behind the texts on the navigation bar.
+        -->
+        <ul>
+            <!--This will display Home, About Us, etc... on the navigation bar.-->
+            <!--Notice the '#' in some texts. This means that the link will be link to a section in the current page.
+            However, for the ones that don't have it, it will open in a new page.-->
+            <li><a class="active" href = "/templates/Home.html"><i class="fa fa-fw fa-home"></i> HOME </a></li>
+            <li><a href = "/templates/About.html" rel="noopener noreferrer">ABOUT US</a></li> <!--"noopener noreferrer" 
+                is used to prevent the newly opened tab from being able to modify the original tab maliciously-->
+                <!--I have discovered that in order for another html file to work (when running it)
+                it MUST BE in the same folder. Thanks to https://www.youtube.com/watch?v=Ogm7qZRkm1I&ab_channel=WODADev
+            for the explanation.-->
+            <li><a href = "sermons"> SERMONS </a></li>
+            <li><a href = "#locations"> LOCATIONS </a></li>
+            <li><a href = "#events"> EVENTS </a></li>
+            <li><a href = "resources"> RESOURCES </a></li>
+            <li><a href = "#contactus"><i class="fa fa-fw fa-envelope"></i> CONTACT US </a></li>
+            
+            
+            <!--This is still on the same navigation bar but on the right.-->
+            <!--Notice that each social media will be opened in a new tab once clicked. I used target="_blank" to 
+            enable it to open in a new tab.-->
+            <div class="topnav-right">
+                <li-2><a href="https://m.facebook.com/ScotlandDLBC/" target="_blank"><i class="fab fa-facebook"></i></a></li-2> <!--Facebook icon-->
+                <li-2><a href="https://twitter.com/dclmhq?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li-2> <!--Twitter icon-->
+                <li-2><a href="https://www.youtube.com/channel/UCu7KQmdGmj_AJDe5ghrp3Kg" target="_blank"><i class="fab fa-youtube"></i></a></li-2> <!--Youtube icon-->
+            </div>
+        </ul> 
+        </div>
+    </nav>
+
+<!--THIS SECTION IS FOR THE SLIDESHOW AND ITS ANIMATION-->
+    <!--Slideshow-->
+    <div class="slideshow-container">
+        <div class="slideshow-inner">
+        <!--Slideshow 1-->
+        <div class="mySlides fade" style="display: block;"> <!--In order for the first image to show on the slideshow and not show a blank 
+        image on it, what is needed is to add   style="display: block;"-->
+            <div class="numbertext"><b>1 / 3</b></div> <!--Text in bold-->
+            <img src="/static/Images/IMG_85392.jpg">
+            <div class="text">
+                <p style="float: left;"><img src="/static/Images/DeeperLifeLogo.jpg" width="110" height="100"></p>
+                <p style="font-weight: bold;">Welcome to the Deeper life Bible Church, Scotland.</p>
+                <p>Your spiritual welfare is our concern.</p>
+            </div>
+        </div>
+
+        <!--Slideshow 2-->
+        <div class="mySlides fade">
+            <div class="numbertext"><b>2 / 3</b></div>
+            <img src="/static/Images/IMG_choir.jpg">
+            <div class="text">
+                <p style="font-weight: bold;">Join us every week to hear God's word &#128214</p>
+                <p>As you grow in God's word, you will experience a great change in your life</p>
+            </div>
+        </div>
+
+        <!--Slideshow 3-->
+        <div class="mySlides fade">
+            <div class="numbertext"><b>3 / 3</b></div>
+            <img src="/static/Images/IMG_85362.jpg">
+            <div class="text">
+                <p style="font-weight: bold;">Church services:</p>
+                <p>Sundays @10a.m.   Tuesdays @7p.m.   Fridays @7p.m.</p>
+            </div>
+        </div>
+
+        <!--Set the arrows to left and right (<, >)-->
+        <a class="prev" onclick="plusSlides(-1)"><</a> <!--that is the arrow to the left (<)-->
+        <a class="next" onclick="plusSlides(1)">></a> <!--that is the arrow to the right (>)-->
+     </div>
+    </div>
+    <br>
+
+    <!--Set the dots or buttons or indicators-->
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <!--This section is for the evnts/programs.-->
+    <section style=" background-color: rgb(168, 224, 229);">
+        <h2 id="events" style="color: blue; background-color: rgb(94, 197, 207); box-shadow: 5px 5px 10px black;"><i>Events</i></h2>
+        <div class="image">
+            <img class="image_img" src="/static/Images/SeptGlobalCrusade.jpeg" alt="SeptGlobalCrusade">
+            <div class="image_overlay">
+                <div class="image_title">Join Live on Youtube<i class="fab fa-youtube"></i>
+                    <a class="image_description" href="https://www.youtube.com/watch?v=o9m6nnJxM7k&ab_channel=DeeperChristianLifeMinistry">
+                        Click here
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+</body>
+</html>

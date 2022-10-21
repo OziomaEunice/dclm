@@ -1,0 +1,65 @@
+/* THIS IS FOR CATEGORY BELOW EVENTS SECTION */
+
+/* Set the properties of the image*/
+.image {
+    position: relative; /*this will help in eventually allowing the overlay to position absolutely*/
+    width: 400px;
+}
+
+/* Working on the image itself*/
+.image_img {
+    display: block; /*this will help eliminate the space at the bottom you find*/
+    width: 100%; /*this ensures it stays within the defined properties of the .image class*/
+}
+
+/* Work with the overlay*/
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /*this way the overlay is hidden by default*/
+    transition: opacity 0.25s;
+}
+
+/* Work on the transitions*/
+
+/*In this section, make sure that the text & description
+appears when hovering*/
+/* >* means every direct child pf the overlay (i.e. image_title
+and image_description. */
+.image_overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+/*In this section, make sure that when hovering over the image its
+image overlay changes color.*/
+.image_overlay:hover {
+    opacity: 1; /*shows overlay background color*/
+}
+
+.image_overlay:hover > * {
+    transform: translateY(0);
+}/* >* means every direct child pf the overlay (i.e. image_title
+and image_description. */
+
+/* Work on the title & description (link) to decrease the spaces
+in between.*/
+.image_title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image_description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}

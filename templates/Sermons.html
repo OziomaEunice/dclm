@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+    <link rel="stylesheet" href="navbar.css"> <!--This links the style.css file with this file-->
+    <link rel="stylesheet" href="slideshow.css"> <!--This links the style2.css file with this file-->
+    <link rel="stylesheet" href="SocialMedia.css"> <!--This links the SocialMedia.css file with this file-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCLM SCOTLAND | Sermons</title>
+    <link rel="icon" href="Images/DeeperLifeLogo.jpg" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+    of the page (DCLM SCOTLAND)-->
+</head>
+<body style="background-color: #d4dadc;">
+    <!--THIS IS THE SERMONS PAGE. ALL CONTENT IN HERE WILL BE DISPLAYED ON THE WEB PAGE-->
+
+<!--THIS SECTION IS FOR THE NAVIGATION BAR-->
+    <nav> <!--nav bar-->
+        <div id="myDIV"> <!--This was taken from #myDIV. I got this code from 
+            https://www.w3schools.com/cssref/tryit.asp?filename=trycss_play_text-shadow .
+        What this will do is it will put a shadow behind the texts on the navigation bar.
+        -->
+        <ul>
+            <!--This will display Home, About Us, etc... on the navigation bar.-->
+            <!--Notice the '#' in some texts. This means that the link will be link to a section in the current page.
+            However, for the ones that don't have it, it will open in a new page.-->
+            <li><a href = "Home.html"><i class="fa fa-fw fa-home"></i> HOME </a></li>
+            <li><a href = "About.html" rel="noopener noreferrer">ABOUT US</a></li> <!--"noopener noreferrer" 
+                is used to prevent the newly opened tab from being able to modify the original tab maliciously-->
+                <!--I have discovered that in order for another html file to work (when running it)
+                it MUST BE in the same folder. Thanks to https://www.youtube.com/watch?v=Ogm7qZRkm1I&ab_channel=WODADev
+            for the explanation.-->
+            <li><a class="active" href = "sermons" rel="noopener noreferrer"> SERMONS </a></li>
+            <li><a href = "Home.html#locations"> LOCATIONS </a></li>
+            <li><a href = "Home.html#events"> EVENTS </a></li>
+            <li><a href = "resources"> RESOURCES </a></li>
+            <li><a href = "Home.html#contactus"><i class="fa fa-fw fa-envelope"></i> CONTACT US </a></li>
+            
+            
+            <!--This is still on the same navigation bar but on the right.-->
+            <!--Notice that each social media will be opened in a new tab once clicked. I used target="_blank" to 
+            enable it to open in a new tab.-->
+            <div class="topnav-right">
+                <li-2><a href="https://m.facebook.com/ScotlandDLBC/" target="_blank"><i class="fab fa-facebook"></i></a></li-2> <!--Facebook icon-->
+                <li-2><a href="https://twitter.com/dclmhq?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li-2> <!--Twitter icon-->
+                <li-2><a href="https://www.youtube.com/channel/UCu7KQmdGmj_AJDe5ghrp3Kg" target="_blank"><i class="fab fa-youtube"></i></a></li-2> <!--Youtube icon-->
+            </div>
+        </ul> 
+        </div>
+    </nav>
+</body>
+</html>
