@@ -1,0 +1,27 @@
+/*THIS IS FOR THE SOCIAL MEDIA ICONS.*/
+
+.topnav-right{
+    float: right;
+}
+
+li-2 {
+    float: left;
+    border-right: none;
+} /*The text will be set to the right for more information for the user.
+In addition, border lines have been added to each of them.*/
+
+li-2 :last-child {
+    border-right: none;
+} /*border line of the last text to be removed.*/
+
+li-2 a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} /*This will provide reference (or rather to click on the link) for the information on the bar (i.e. Home, About Us, etc...)*/
+
+li-2 a:hover:not(.active) {
+    background-color: #087397;
+} /*Set the background color for the text in the bar when hovering over it.*/
