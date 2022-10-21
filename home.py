@@ -9,7 +9,7 @@ from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/home/')
+@app.route('/Home/')
 def home():
     return render_template('Home.html')
 
