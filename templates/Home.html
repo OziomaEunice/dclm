@@ -35,8 +35,8 @@
             <!--This will display Home, About Us, etc... on the navigation bar.-->
             <!--Notice the '#' in some texts. This means that the link will be link to a section in the current page.
             However, for the ones that don't have it, it will open in a new page.-->
-            <li><a class="active" href = "/templates/Home.html"><i class="fa fa-fw fa-home"></i> HOME </a></li>
-            <li><a href = "/templates/About.html" rel="noopener noreferrer">ABOUT US</a></li> <!--"noopener noreferrer" 
+            <li><a class="active" href = "{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> HOME </a></li>
+            <li><a href = "{{ url_for('about') }}" rel="noopener noreferrer">ABOUT US</a></li> <!--"noopener noreferrer" 
                 is used to prevent the newly opened tab from being able to modify the original tab maliciously-->
                 <!--I have discovered that in order for another html file to work (when running it)
                 it MUST BE in the same folder. Thanks to https://www.youtube.com/watch?v=Ogm7qZRkm1I&ab_channel=WODADev
