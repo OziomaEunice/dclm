@@ -38,9 +38,12 @@ def sermon():
 # How this will work is by using {{ url_for('resource') }} in the html files,
 # (in the section of Resources), it will link to the html files and open them 
 # on the browser.
-@app.route('/DCLM/Resouces/')
+@app.route('/DCLM/Resources/')
 def resource():
     return render_template('Resource.html')
+
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
