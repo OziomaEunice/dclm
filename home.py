@@ -17,6 +17,9 @@ def home():
     return render_template('Home.html')
 
 # About Us page
+# How this will work is by using {{ url_for('about') }} in the html files,
+# (in the section of About), it will link to the html files and open them 
+# on the browser.
 @app.route('/DCLM/About/')
 def about():
     return render_template('About.html')
