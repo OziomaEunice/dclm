@@ -12,12 +12,12 @@ app = Flask(__name__)
 
 
 # Home page
-@app.route('/home page/')
+@app.route('/DCLM/Home/')
 def home():
     return render_template('Home.html')
 
 # About Us page
-@app.route('/home page/About/')
+@app.route('/DCLM/About/')
 def about():
     return render_template('About.html')
 
