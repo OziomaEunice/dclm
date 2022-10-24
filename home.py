@@ -4,7 +4,6 @@
 # import flask | redirect user to a web page | url_for is used for creating a URL 
 # to prevent the overhead of having to change URLs 
 # throughout the application (including in templates)
-from crypt import methods
 from fileinput import filename
 from os import abort
 from flask import Flask, redirect, url_for, request, render_template
@@ -18,10 +17,8 @@ def home():
     return render_template('Home.html')
 
 # About Us page
-@app.route('/DCLM/About/', methods=['GET','POST'])
+@app.route('/DCLM/About/')
 def about():
-    if request.method == 'POST':
-        return redirect(url_for('home'))
     return render_template('About.html')
 
 if __name__ == "__main__":
