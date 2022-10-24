@@ -12,12 +12,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCLM SCOTLAND | Sermon</title>
+    <title>DCLM SCOTLAND | Resources</title>
     <link rel="icon" href="/static/Images/DeeperLifeLogo.jpg" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
     of the page (DCLM SCOTLAND)-->
 </head>
 <body style="background-color: #d4dadc;">
-    <!--THIS IS THE SERMON PAGE. ALL CONTENT IN HERE WILL BE DISPLAYED ON THE WEB PAGE-->
+    <!--THIS IS THE RESOURCE PAGE. ALL CONTENT IN HERE WILL BE DISPLAYED ON THE WEB PAGE-->
     {% block content %}
 <!--THIS SECTION IS FOR THE NAVIGATION BAR-->
     <nav> <!--nav bar-->
@@ -35,10 +35,10 @@
                 <!--I have discovered that in order for another html file to work (when running it)
                 it MUST BE in the same folder. Thanks to https://www.youtube.com/watch?v=Ogm7qZRkm1I&ab_channel=WODADev
             for the explanation.-->
-            <li><a class="active" href = "{{ url_for('sermon') }}"> SERMONS </a></li>
+            <li><a href = "{{ url_for('sermon') }}"> SERMONS </a></li>
             <li><a href = "Home.html#locations"> LOCATIONS </a></li>
             <li><a href = "Home.html#events"> EVENTS </a></li>
-            <li><a href = "resources"> RESOURCES </a></li>
+            <li><a class="active" href = "{{ url_for('resource') }}"> RESOURCES </a></li>
             <li><a href = "Home.html#contactus"><i class="fa fa-fw fa-envelope"></i> CONTACT US </a></li>
             
             

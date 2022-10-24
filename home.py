@@ -16,7 +16,7 @@ app = Flask(__name__)
 def home():
     return render_template('Home.html')
 
-# About Us page
+# About page
 # How this will work is by using {{ url_for('about') }} in the html files,
 # (in the section of About), it will link to the html files and open them 
 # on the browser.
@@ -25,14 +25,22 @@ def about():
     return render_template('About.html')
 
 
-# About Us page
-# How this will work is by using {{ url_for('about') }} in the html files,
-# (in the section of About), it will link to the html files and open them 
+# Sermon page
+# How this will work is by using {{ url_for('sermon') }} in the html files,
+# (in the section of Sermons), it will link to the html files and open them 
 # on the browser.
 @app.route('/DCLM/Sermons/')
 def sermon():
     return render_template('Sermon.html')
 
+
+# Resource page
+# How this will work is by using {{ url_for('resource') }} in the html files,
+# (in the section of Resources), it will link to the html files and open them 
+# on the browser.
+@app.route('/DCLM/Resouces/')
+def resource():
+    return render_template('Resource.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
