@@ -24,5 +24,15 @@ def home():
 def about():
     return render_template('About.html')
 
+
+# About Us page
+# How this will work is by using {{ url_for('about') }} in the html files,
+# (in the section of About), it will link to the html files and open them 
+# on the browser.
+@app.route('/DCLM/Sermons/')
+def sermon():
+    return render_template('Sermon.html')
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
