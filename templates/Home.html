@@ -30,8 +30,8 @@
         -->
         <ul>
             <!--This will display Home, About Us, etc... on the navigation bar.-->
-            <!--Notice the '#' in some texts. This means that the link will be link to a section in the current page.
-            However, for the ones that don't have it, it will open in a new page.-->
+            <!--Notice the '#' in some texts. This means that the link will be linked to a section in the current page.
+            However, for the ones that don't have it, it will open in new page.-->
             <li><a class="active" href = "{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> HOME </a></li>
             <li><a href = "{{ url_for('about') }}" rel="noopener noreferrer">ABOUT US</a></li> <!--"noopener noreferrer" 
                 is used to prevent the newly opened tab from being able to modify the original tab maliciously-->
