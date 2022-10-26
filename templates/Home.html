@@ -8,6 +8,7 @@
     <link href="{{ url_for('static', filename='css/slideshow.css') }}" type= "text/css" rel= "stylesheet"> <!--This links slideshow.css file-->
     <link href="{{ url_for('static', filename='css/SocialMedia.css') }}" type= "text/css" rel= "stylesheet"> <!--This links SocialMedia.css file-->
     <link href="{{ url_for('static', filename='css/events.css') }}" type= "text/css" rel= "stylesheet"> <!--This links events.css-->
+    <link href="{{ url_for('static', filename='css/footer.css') }}" type= "text/css" rel= "stylesheet"> <!--This links footer.css-->
     <link rel="stylesheet" href="static/Images"> <!--This links with the images folder-->
     <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'> <!--Google font-->
     <meta charset="UTF-8">
@@ -153,7 +154,38 @@
     </section>
 
 <!--THIS SECTION IS FOR CONTACTS-->
-<section class="contact_background"></section>
+    <!--Foot header section-->
+    <section>
+        <div class="footer">
+            <div class="col-1">
+                <h3>USEFUL LINKS</h3>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">Explore</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="col-2">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <br>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+                <p><sub><i>© Designed by Ozioma E. Onwubiko</i></sub></p>
+            </div>
+            <div class="col-3">
+                <h3>CONTACT</h3>
+                <p>10 Colinton Rd,<br> Edinburgh, EH10 5DT</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
 </body>
 </html>
