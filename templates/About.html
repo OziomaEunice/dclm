@@ -36,10 +36,10 @@
                 it MUST BE in the same folder. Thanks to https://www.youtube.com/watch?v=Ogm7qZRkm1I&ab_channel=WODADev
             for the explanation.-->
             <li><a href = "{{ url_for('sermon') }}"> SERMONS </a></li>
-            <li><a href = "Home.html#locations"> LOCATIONS </a></li>
-            <li><a href = "Home.html#events"> EVENTS </a></li>
+            <li><a href = "{{ url_for('location') }}"> LOCATIONS </a></li>
+            <li><a href = "{{ url_for('event') }}"> EVENTS </a></li>
             <li><a href = "resources"> RESOURCES </a></li>
-            <li><a href = "Home.html#contactus"><i class="fa fa-fw fa-envelope"></i> CONTACT US </a></li>
+            <li><a href = "{{ url_for('contact') }}"><i class="fa fa-fw fa-envelope"></i> CONTACT US </a></li>
             
             
             <!--This is still on the same navigation bar but on the right.-->
