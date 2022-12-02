@@ -44,14 +44,6 @@ def resource():
     return render_template('Resource.html')
 
 
-# Location
-# How this will work is by using {{ url_for('location') }} in the html files,
-# it will link to the html files and open them 
-# on the browser.
-@app.route('/DCLM/Home/Locations')
-def location():
-    return render_template('Home.html')
-
 
 
 if __name__ == "__main__":
