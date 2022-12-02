@@ -44,12 +44,21 @@ def resource():
     return render_template('Resource.html')
 
 
-# Location
-# How this will work is by using {{ url_for('location') }} in the html files,
+# Location, Event & Contact
+# How this will work is by using {{ url_for('location') }}, 
+# {{ url_for('event') }}, {{ url_for('contact') }} in the html files,
 # it will link to the html files and open them 
 # on the browser.
 @app.route('/DCLM/Home#location/')
 def location():
+    return render_template('Home.html')
+
+@app.route('/DCLM/Home#events/')
+def event():
+    return render_template('Home.html')
+
+@app.route('/DCLM/Home#contactus/')
+def contact():
     return render_template('Home.html')
 
 
